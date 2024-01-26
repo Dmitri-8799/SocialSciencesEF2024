@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:viewmodels="clr-namespace:SocialSciencesEF2024.ViewModels"
+             x:DataType="viewmodels:TableRb3ViewModel"
+           
+             x:Class="SocialSciencesEF2024.Views.TableRb3View"         
+             Title="TableRb3View">
+
+
+   <Frame>
+ <VerticalStackLayout>
+        <Button Command="{Binding ButtonConfirmClickedCommand}" IsVisible="false" >  </Button>
+
+
+       <RadioButton x:Name="option1" x:Uid="1" GroupName="answers" Content="{Binding CurrentQuestion.Option1} " IsChecked="True" >
+<RadioButton.Behaviors>
+        <toolkit:EventToCommandBehavior
+            EventName="CheckedChanged"
+            Command="{Binding RadioButtonIsCheckedCommand}"
+            CommandParameter="1"
+        />
+            </RadioButton.Behaviors>
+        </RadioButton>
+
+
+                   <RadioButton x:Name="option2" x:Uid="2" GroupName="answers" Content="{Binding CurrentQuestion.Option2} ">
+<RadioButton.Behaviors>
+        <toolkit:EventToCommandBehavior
+            EventName="CheckedChanged"
+            Command="{Binding RadioButtonIsCheckedCommand}"
+            CommandParameter="2"
+        />
+            </RadioButton.Behaviors>
+        </RadioButton>
+
+
+<RadioButton x:Name="option3" x:Uid="3" GroupName="answers" Content="{Binding CurrentQuestion.Option3} ">
+<RadioButton.Behaviors>
+        <toolkit:EventToCommandBehavior
+            EventName="CheckedChanged"
+            Command="{Binding RadioButtonIsCheckedCommand}"
+            CommandParameter="3"
+        />
+            </RadioButton.Behaviors>
+        </RadioButton>      
+     
+    </VerticalStackLayout>
+    </Frame>
+
+
+
+</ContentPage>
+
+
+
