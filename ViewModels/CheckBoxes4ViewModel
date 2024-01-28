@@ -20,8 +20,23 @@ get {return strOfAnswers}
 set
 {
 strOfAnswers = value;
+OnPropertyChanged ("StrOfAnswers")
 }
 }
+
+public void OnPropertyChanged (string propertyName)
+{
+
+
+
+}
+
+
+ICommand ChckBox1Command;
+ICommand ChckBox2Command;
+ICommand ChckBox3Command;
+ICommand ChckBox4Command;
+
 
 
 }
