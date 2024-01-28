@@ -1,0 +1,29 @@
+using System;
+using CommunityToolkit.Maui;
+
+
+namespase SocialScienceEF2024
+{
+public class CheckBoxes4ViewModel : INotifyPropertyChanged
+{
+TableCheckBoxes4Model currentQuestion = new TableCheckBoxes4Model();
+
+
+private int? chckBox1;
+private int? chckBox2;
+private int? chckBox3;
+private int? chckBox4;
+private string strOfAnswers;
+public string? StrOfAnswers
+{
+get {return strOfAnswers}
+set
+{
+strOfAnswers = value;
+}
+}
+
+
+}
+
+
